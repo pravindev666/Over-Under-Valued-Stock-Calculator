@@ -1,10 +1,15 @@
-# Use a lightweight web server
-FROM nginx:alpine
+# Use the latest lightweight Nginx image
+FROM nginx:latest
 
-# Copy HTML, CSS, and JS files to the appropriate location
-COPY src/main/resources/index.html /usr/share/nginx/html/
-COPY src/main/resources/styles.css /usr/share/nginx/html/
-COPY src/main/resources/script.js /usr/share/nginx/html/
+# Set the working directory
+WORKDIR /usr/share/nginx/html
 
-# Expose the default port
+# Copy the static files into the container
+COPY src/main/resources/index.html ./
+COPY src/main/resources/styles.css ./
+COPY src/main/resources/script.js ./
+
+# Expose the default HTTP port
 EXPOSE 80
+
+# CMD is not necessary because Nginx's default CMD is to run Nginx
