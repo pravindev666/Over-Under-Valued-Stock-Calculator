@@ -1,0 +1,47 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    background-color: black; /* Black background */
+    color: red; /* Red font color */
+}
+.calculator {
+    text-align: center;
+    background-color: #000000;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.5); /* Red shadow */
+}
+.calculator input {
+    margin: 10px;
+    padding: 10px;
+    width: 200px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    color: red; /* Red font color for inputs */
+}
+.calculator button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    border: none;
+    background-color: red; /* Red button background */
+    color: black; /* Black button text */
+    border-radius: 5px;
+    cursor: pointer;
+}
+.calculator button:hover {
+    background-color: #ff4d4d; /* Lighter red on hover */
+}
+.calculator .result {
+    margin-top: 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+.calculator .valuation {
+    margin-top: 10px;
+    font-size: 1em;
+    font-weight: normal;
+    color: red; /* Red color for valuation text */
+}
